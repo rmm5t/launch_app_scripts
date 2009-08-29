@@ -32,9 +32,7 @@ APPLICATIONS.each do |app|
   f = "launch/#{app}.scpt"
   file f => 'launch' do
     compile f, <<-END
-      tell application "#{app}"
-        activate
-      end tell
+      do shell script "open -a \\"#{app}\\""
     END
   end
   file :compile => f
