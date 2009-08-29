@@ -1,5 +1,6 @@
 SCRIPTS_DIR = "#{ENV['HOME']}/Library/Scripts"
-APPLICATIONS = %w(Adium Chax Emacs Mailplane Safari Terminal)
+APPLICATIONS = ["Adium", "Chax", "Emacs", "Finder", "Firefox", "Mailplane",
+                "PandoraJam", "Safari", "Terminal"]
 
 def compile(file, source)
   sh "osacompile -d -o '#{file}' -e '#{source}'"
