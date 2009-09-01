@@ -1,13 +1,13 @@
 SCRIPTS_DIR = "#{ENV['HOME']}/Library/Scripts"
 APPLICATIONS = ["Adium", "Chax", "Emacs", "Finder", "Firefox", "Mailplane",
-                "PandoraJam", "Safari", "Terminal"]
+                "PandoraJam", "Safari", "Skitch", "Terminal"]
 
 def compile(file, source)
   sh "osacompile -d -o '#{file}' -e '#{source}'"
 end
 
 def hide_extension(file)
-  sh "test -e /usr/bin/SetFile && /usr/bin/SetFile -a E '#{file}'"
+  sh "test -e /usr/bin/setfile && /usr/bin/setfile -a E '#{file}'"
 end
 
 def install_scripts(directory)
