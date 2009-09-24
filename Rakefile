@@ -1,6 +1,7 @@
 SCRIPTS_DIR = "#{ENV['HOME']}/Library/Scripts"
-APPLICATIONS = ["Adium", "Chax", "Emacs", "Finder", "Firefox", "Mailplane",
-                "PandoraJam", "Safari", "Skitch", "Terminal", "Tweetie"]
+APPLICATIONS = ["Adium", "Billing", "Chax", "Emacs", "Finder", "Firefox",
+                "Mailplane", "PandoraJam", "Safari", "Skitch", "Terminal",
+                "Tweetie"]
 
 def compile(file, source)
   sh "arch -i386 osacompile -d -o '#{file}' -e '#{source}'"
