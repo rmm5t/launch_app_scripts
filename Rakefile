@@ -12,7 +12,7 @@ end
 
 def install_scripts(directory)
   source_dir  = directory
-  install_dir = "#{SCRIPTS_DIR}/#{directory.capitalize}"
+  install_dir = "#{SCRIPTS_DIR}/#{directory}"
 
   mkdir_p install_dir
   cp Dir["#{source_dir}/*.scpt"], install_dir
@@ -21,16 +21,16 @@ end
 
 desc "Install Launch task"
 task :install => :compile do
-  install_scripts 'launch'
+  install_scripts 'Launch'
 end
 
 desc "Compile Launch AppleScripts"
 task :compile  # built up directory
 
-directory  'launch'
+directory  'Launch'
 APPLICATIONS.each do |app|
-  f = "launch/#{app}.scpt"
-  file f => 'launch' do
+  f = "Launch/#{app}.scpt"
+  file f => 'Launch' do
     compile f, <<-END
       do shell script "open -a \\"#{app}\\""
     END
@@ -40,5 +40,5 @@ end
 
 desc "Remove generated files"
 task :clean do
-  rm_rf ["launch"]
+  rm_rf ["Launch"]
 end
