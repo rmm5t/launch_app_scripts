@@ -1,9 +1,9 @@
 SCRIPTS_DIR = "#{ENV['HOME']}/Library/Scripts"
 APPLICATIONS = ["Adium", "Chax", "Emacs", "Finder", "Firefox", "Mailplane",
-                "PandoraJam", "Safari", "Skitch", "Terminal"]
+                "PandoraJam", "Safari", "Skitch", "Terminal", "Tweetie"]
 
 def compile(file, source)
-  sh "osacompile -d -o '#{file}' -e '#{source}'"
+  sh "arch -i386 osacompile -d -o '#{file}' -e '#{source}'"
 end
 
 def hide_extension(file)
