@@ -1,5 +1,5 @@
 SCRIPTS_DIR = "#{ENV['HOME']}/Library/Scripts"
-APPLICATIONS = ["Adium", "Billing", "Chax", "Emacs", "Finder", "Firefox",
+APPLICATIONS = ["Adium", "Billing", "iChat", "Emacs", "Finder", "Firefox",
                 "Mailplane", "PandoraJam", "Safari", "Skitch", "Terminal",
                 "Tweetie"]
 

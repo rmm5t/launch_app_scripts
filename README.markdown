@@ -1,3 +1,5 @@
+** NOTE: I don't use this anymore.  After writing this, I realized FastScripts supports Aliases to Applications withing the `~/Library/Scripts` folder. This still might be useful to others, so feel free to fork away. **
+
 Lauch App Scripts
 =================
 
